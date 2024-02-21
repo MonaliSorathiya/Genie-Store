@@ -1,2 +1,1 @@
-# Grocery-Genie
-Grocery Genie Web App Using MEAN StAcK
+# Genie-Store Web App Using MEAN StAcK
