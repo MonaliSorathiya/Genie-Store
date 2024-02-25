@@ -1,5 +1,5 @@
 <!-- Tailwind CSS -->
-<div class="h-screen overflow-hidden flex items-center justify-center">
+<div class="h-full max-h-full ... overflow-hidden flex items-center justify-center">
     <form class="form" name="form" #f="ngForm" (ngSubmit)="f.form.valid && registerNewUser()" novalidate>
         <div class=" text-white flex min-h-screen flex-col items-center pt-16 sm:justify-center sm:pt-0">
             <a href="#">
@@ -21,7 +21,7 @@
                     Genie Store
                 </div>
             </a>
-            <div class="relative mt-12 w-full max-w-lg sm:mt-10">
+            <div class="relative mt-6 w-full max-w-lg sm:mt-4">
                 <div class="relative -mb-px h-px w-full bg-gradient-to-r from-transparent via-sky-300 to-transparent"
                     bis_skin_checked="1"></div>
                 <div
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <!-- Mobile Number -->
-                        <div class="mt-4">
+                        <div class="mt-2.5">
                             <div>
                                 <div
                                     class="group relative rounded-lg border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-sky-300/30">
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <!-- Email -->
-                        <div class="mt-4">
+                        <div class="mt-2.5">
                             <div>
                                 <div
                                     class="group relative rounded-lg border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-sky-300/30">
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <!-- Password -->
-                        <div class="mt-4">
+                        <div class="mt-2.5">
                             <div>
                                 <div
                                     class="group relative rounded-lg border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-sky-300/30">
