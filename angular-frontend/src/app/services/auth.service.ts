@@ -6,19 +6,21 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthService {
-
-  private registerUrl = 'http://localhost:9091/api/userDetails/registerNewCustomer';
-  private loginUrl = 'http://localhost:9091/api/userDetails/loginCustomer';
+  baseUri: string = 'http://localhost:9091/api';
 
   constructor(
     private http: HttpClient,
   ) { }
 
   registerNewUser(user: any) {
-    return this.http.post<any>(this.registerUrl, user);
+    let url = `${this.baseUri}/userDetails/registerNewCustomer`;
+    console.log('url: registerURL', url);
+    return this.http.post<any>(url, user);
   }
   login(auth: any) {
-    return this.http.post<any>(this.loginUrl, auth);
+    let url = `${this.baseUri}/userDetails/loginCustomer`;
+    console.log('url:loginURL ', url);
+    return this.http.post<any>(url, auth);
   }
 
 

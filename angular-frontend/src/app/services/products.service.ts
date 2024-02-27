@@ -24,8 +24,6 @@ export class ProductsService {
   // Remove single product from the cart
   removeProductFromCart(productId: any) {
     this.cartItems.map((item, index) => {
-      console.log('item:& productidddd ', item.id, productId);
-      console.log('item.id === productId: ', item.id === productId);
       if (item.id === productId) {
         this.cartItems.splice(index, 1);
       }
