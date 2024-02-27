@@ -3,7 +3,7 @@ const Customer = require('../models/customerDetailsModel.js');
 
 // Handling user signup
 exports.registerNewCustomer = async (req, res) => {
-    console.log('req:666666 ', req.body);
+    console.log('req:registerNewCustomer ', req.body);
     Customer
         .find({ email: req.body.email })
         .exec()
@@ -26,7 +26,7 @@ exports.registerNewCustomer = async (req, res) => {
                         });
                     })
                     .catch((err) => {
-                        console.log(err);
+                        console.log("registerNewCustomer",err);
                         res.status(500).json({
                             error: err,
                         });
@@ -37,7 +37,7 @@ exports.registerNewCustomer = async (req, res) => {
 
 //Handling user login
 exports.loginCustomer = async (req, res) => {
-    console.log('req:4777 ', req.body);
+    console.log('req:loginCustomer ', req.body);
     try {
         // check if the user exists
         const user = await Customer.findOne({ username: req.body.username });

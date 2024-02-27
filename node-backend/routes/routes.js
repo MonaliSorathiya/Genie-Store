@@ -10,11 +10,11 @@ module.exports = (app) => {
         next();
     });
 
-    app.post('/api/userDetails/registerNewCustomer', customerDetailsController.registerNewCustomer); // Update a product by id 
-    app.post('/api/userDetails/loginCustomer', customerDetailsController.loginCustomer); // Update a product by id 
-    app.post('/api/products/addNewProduct', productsController.addNewProduct); // Create and Save a new Product
-    app.get('/api/products/getAllProducts', productsController.getAllProducts); // Get all products
-    app.get('/api/products/:productId', productsController.findOneProduct) // Get one product based on product id
-    app.post('/api/products/updateProducts', productsController.updateProducts); // Update a product by id 
+    app.post('/userDetails/registerNewCustomer', customerDetailsController.registerNewCustomer); // Update a product by id 
+    app.post('/userDetails/loginCustomer', customerDetailsController.loginCustomer); // Update a product by id 
+    app.post('/products/addNewProduct', productsController.addNewProduct); // Create and Save a new Product
+    app.get('/products/getAllProducts', productsController.getAllProducts); // Get all products
+    app.get('/products/:productId', productsController.findOneProduct) // Get one product based on product id
+    app.post('/products/updateProducts', productsController.updateProducts); // Update a product by id 
 
 }
