@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html'
@@ -68,7 +67,7 @@ export class CheckoutDialog {
       this.dialogRef.close();
     }
   }
-  cancel(){
+  cancel() {
     this.dialogRef.close();
   }
 }
