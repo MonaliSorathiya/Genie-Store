@@ -18,7 +18,25 @@ mongoose
     })
 app.use(bodyParser.json());
 app.use(cors());
-require('./routes/routes.js')(app);
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Header",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PATCH, DELETE, OPTIONS"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
+    );
+    next();
+  });
+// require('./routes/routes.js')(app);
+let routes = require("./routes/routes.js");
+app.use("/api", routes);
 
 app.get('/', (req, res) => {
     res.send('Hello, world!');
