@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthService {
-  // baseUri: string = 'http://localhost:9091'; // For Local
-  baseUri: string = 'http://webapp.geniestore.com'; // For Production
+  baseUri: string = 'http://localhost:9091'; // For Local
+  // baseUri: string = 'http://webapp.geniestore.com'; // For Production
 
   constructor(
     private http: HttpClient,
